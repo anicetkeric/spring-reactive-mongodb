@@ -5,22 +5,20 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-import org.springframework.data.mongodb.core.mapping.Field;
+
+import javax.validation.constraints.NotNull;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Document
-public class Author {
+public class Publisher {
 
     @Id
     private String id;
 
-    private String lastname;
+    @NotNull
+    private String name;
 
-    @Field("middlename")
-    private String middleName;
-
-    private String firstname;
-
+    private String email;
 }

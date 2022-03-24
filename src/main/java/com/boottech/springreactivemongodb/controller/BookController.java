@@ -24,7 +24,7 @@ public class BookController {
     }
 
     @GetMapping("/Books")
-    public Flux<Book> getAllBooks(@RequestParam(value = "year", required = false) Integer year) {
+    public Flux<Book> getAllBooks() {
         return bookService.getAllBook();
     }
 
